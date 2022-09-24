@@ -3,6 +3,8 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    vertical-align: baseline;
+    border: 0;
     /* border: 1px solid red; */
 }
 
@@ -41,10 +43,11 @@ header {
     align-items: center;
 }
 
-.headerContainer ul {
+.headerContainer ul,li {
     display: flex;
     gap: 30px;
 }
+
 
 .headerContainer a::after, .headerContainer a:active::after  {
     content: '';
@@ -68,64 +71,45 @@ header {
     width: 80px;
 }
 
-main {
-
-
-}
-
-.section1 {
-    min-height: calc(100vh - 90px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .sectionContainer {
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: space-between;
+    justify-content: center;
     padding: 60px;
     
 }
 
-.col1 {
+.section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 50%;
-    padding: 30px;
 }
 
-.col2 {
+.section.s1 {
+    min-height: calc(100vh - 90px);
+}
+
+.section .col1,.section .col2 {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    width: 50%;
     padding: 30px;
+    width: 100%;
 }
 
 .col2 img {
-
     height: 300px;
-
 }
-
-/* .hashtags {
-
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-
-} */
 
 .containerTitle {
     width: 80%;
 }
 
-#myName {
+.gradientText {
     background-color: #00DBDE;
     background: linear-gradient(90deg, var(--defaultBlue) 0%, var(--defaultLightBlue) 100%);
     -webkit-background-clip: text;
@@ -133,9 +117,3 @@ main {
     color: var(--defaultBlue);
 }
 
-
-footer {
-
-    background-color: #9B9B9B;
-    
-}
