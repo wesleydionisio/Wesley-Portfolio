@@ -9,12 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+
 </head>
 
 <body>
 
-    <header>
+    <header id="header">
         <div class="headerContainer">
 
             <div class="logo"><img src="./img/wd-logo-alternative.svg"></div>
@@ -34,27 +38,71 @@
 
     <main>
 
-        <div class="section1">
-
+        <div class="section s1" id="section1">
             <div class="sectionContainer">
-
-                <div class="col1">
+                <div class="col column">
                     <section class="containerTitle">
                         <h1>Olá!<br>Meu nome é<br><span id="myName">Wesley Dionisio</span></h1>
-                        <p>Veja mais sobre mim abaixo.</p>
-                        <!-- <ul class="hashtags">
-                            <li><a>#Design</a></li>
-                            <li><a>#HTML</a></li>
-                            <li><a>#CSS</a></li>
-                            <li><a>#JS</a></li>
-                            <li><a>#Figma</a></li>
-                            <li><a>#Adobe</a></li>
-                            <li><a>#Creative</a></li>
-                        </ul> -->
-
                     </section>
+                    <ul class="hashtags">
+                        <li><a>#21 anos</a></li>
+                        <li><a>#Gaúcho</a></li>
+                        <li><a>#Design</a></li>
+                        <li><a>#Desenvolvimento</a></li>
+                    </ul>
                 </div>
                 <div class="col2"><img src="./img/foto-circle.png"></div>
+            </div>
+            <div class="scrollDown"><a href="#section2">
+                    <span class="material-symbols-outlined">
+                        mouse
+                    </span></a>
+            </div>
+        </div>
+
+        <div class="section s2" id="section2">
+            <div class="sectionContainer">
+                <div class="col">
+                    <section class="containerTitle alignCenter" id="AboutMe">
+                        <h1>Um pouco mais sobre mim</h1>
+                    </section>
+
+                    <p> Desde o início de minha jornada como designer há mais de 7 anos,
+                        já prestei serviços remotos para agências, gráficas e
+                        profissionais autônomos.</p>
+                    <p> Valorizo trabalhar com pessoas criativas e com a mente igual a
+                        minha: em constante busca por aprendizado e com uma sede por
+                        resolver problemas.</p>
+                    <p>
+                        Sou uma pessoa em infinito questionamento sobre as coisas.
+                        Aquele ar de: <i>"Será que não há uma forma melhor de fazer isso?"</i>
+                    </p>
+                    <br />
+                    <p>
+                        Atualmente cursando Gerenciamento de Projetos pelo Google e
+                        Formação Oracle One
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section s3" id="section3">
+            <div class="sectionContainer">
+
+                <div class="col">
+                    <section class="containerTitle alignCenter" id="AboutMe">
+                        <h1>Skills</h1>
+                    </section>
+                    </div>
+                <div class="col row">
+
+                    <div class="col">A</div>
+                    <div class="col">B</div>
+                    <div class="col">C</div>
+
+                </div>
+
             </div>
 
         </div>
@@ -71,5 +119,7 @@
     </footer>
 
 </body>
+
+<script src="./js/scripts.js" type="text/javascript"></script>
 
 </html>
