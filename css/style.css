@@ -1,0 +1,141 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /* border: 1px solid red; */
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: unset;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: content-box;
+    --defaultGrey: #9B9B9B;
+    --defaultBlue: #0038FE;
+    --defaultLightBlue: #00b6fe;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90px;
+
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerContainer ul {
+    display: flex;
+    gap: 30px;
+}
+
+.headerContainer a::after, .headerContainer a:active::after  {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--defaultBlue);
+    transition: width ease-in-out .3s;
+}
+
+.headerContainer a:hover::after {
+    width: 100%;
+}
+
+.headerContainer a:active::after {
+    width: 100%;
+}
+
+
+.logo {
+    width: 80px;
+}
+
+main {
+
+
+}
+
+.section1 {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectionContainer {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    padding: 60px;
+    
+}
+
+.col1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    padding: 30px;
+}
+
+.col2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    padding: 30px;
+}
+
+.col2 img {
+
+    height: 300px;
+
+}
+
+/* .hashtags {
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+} */
+
+.containerTitle {
+    width: 80%;
+}
+
+#myName {
+    background-color: #00DBDE;
+    background: linear-gradient(90deg, var(--defaultBlue) 0%, var(--defaultLightBlue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--defaultBlue);
+}
+
+
+footer {
+
+    background-color: #9B9B9B;
+    
+}
