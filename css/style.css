@@ -22,7 +22,7 @@ html {
   --defaultLightBlue: #00b6fe;
   --white: white;
   --black: #1a1a1a;
-  --defaultShadow: 0 0 20px rgb(0 0 0 / 8%), 0 10px 14px rgb(0 0 0 / 0%);
+  --defaultShadow: 0 0 20px rgb(0 0 0 / 15%), 0 10px 14px rgb(0 0 0 / 0%);
 }
 
 .material-symbols-outlined {
@@ -199,10 +199,6 @@ html {
     transform: rotate(-45deg) translate3d(0, 0, 0);
   }
 
-  .hidden {
-    display: none !important;
-  }
-
   .sideMenu {
     display: flex;
   }
@@ -268,6 +264,10 @@ html {
   #s3 .sectionContainer {
     margin-top: -120px;
   }
+
+  .tabs {
+    transform: scale(0.6);
+ }
 }
 
 /* End Mobile */
@@ -400,12 +400,14 @@ html {
     flex-direction: row;
   }
 
-  .hidden {
-    display: none !important;
-  }
 }
 
 /* End Desktop */
+
+main {
+  width: 100%;
+  overflow: hidden;
+}
 
 .alignCenter {
   text-align: center;
@@ -454,6 +456,7 @@ html {
   padding: var(--rowPadding);
   width: 100%;
   gap: var(--rowGap);
+  align-items: center;
 }
 
 .column {
@@ -606,6 +609,8 @@ html {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .softwares li {
@@ -617,81 +622,78 @@ html {
   pointer-events: none;
 }
 
-:root {
-  --primary-color: #185ee0;
-  --secondary-color: #e6eef9;
+.primary input+label {
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background-color: #f1f1f1;
+  color: var(--defaultBlue);
+  font-size: 16px; 
+  cursor: pointer;
 }
 
-.tabs {
-  display: flex;
-  position: relative;
-  background-color: #fff;
-  box-shadow: var(--defaultShadow);
-  padding: 0.75rem;
-  border-radius: 99px;
+.primary input:checked+label {
+  background-color: var(--defaultBlue);
+  color: var(--white);
 }
-.tabs * {
-  z-index: 2;
-}
-input[type="radio"] {
+
+.primary input {
+  list-style: none;
   display: none;
 }
-.tab {
+
+.contentSlider {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 54px;
-  width: 200px;
-  font-size: 1.25rem;
-  font-weight: 500;
-  border-radius: 99px;
-  cursor: pointer;
-  transition: color 0.15s ease-in;
 }
-.notification {
+
+#slidedContent {
+  overflow: hidden;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.box {
   display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  margin-left: 0.75rem;
-  border-radius: 50%;
-  background-color: var(--secondary-color);
-  transition: 0.15s ease-in;
+  flex-wrap: wrap;
+  padding: var(--rowPadding);
+  background-color: white;
+  box-shadow: var(--defaultShadow);
+  border-radius: 16px;
+  max-width: 250px;
+  min-height: 350px;
+  text-align: center;
+
 }
-input[type="radio"]:checked + label {
-  color: var(--primary-color);
+
+.box .paragraph {
+  display: table;
 }
-input[type="radio"]:checked + label > .notification {
-  background-color: var(--primary-color);
-  color: #fff;
+
+.box p {
+  display: inline-block;
+  font-size: 12px;
 }
-input[id="radio-1"]:checked ~ .glider {
-  transform: translateX(0);
-}
-input[id="radio-2"]:checked ~ .glider {
-  transform: translateX(100%);
-}
-input[id="radio-3"]:checked ~ .glider {
-  transform: translateX(200%);
-}
-.glider {
-  position: absolute;
-  display: flex;
-  height: 54px;
-  width: 200px;
-  background-color: var(--secondary-color);
-  z-index: 1;
-  border-radius: 99px;
-  transition: 0.25s ease-out;
+
+.image img {
+  border-radius: 16px;
+  max-width: 100%;
 }
 
 
-@media (max-width: 700px) {
-  .tabs {
-    transform: scale(0.6);
- }
-}
+
+
 
 /* Animation Presets */
 
@@ -712,26 +714,13 @@ input[id="radio-3"]:checked ~ .glider {
   }
 }
 
-@keyframes load {
-  from {
-    width: 0%;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
   }
-}
-
-@-webkit-keyframes load {
-  from {
-    width: 0%;
-  }
-}
-
-@-moz-keyframes load {
-  from {
-    width: 0%;
-  }
-}
-
-@-o-keyframes load {
-  from {
-    width: 0%;
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
