@@ -686,7 +686,7 @@ main {
   font-size: 12px;
 }
 
-.image img {
+.image img, .image iframe {
   border-radius: 16px;
   max-width: 100%;
 }
