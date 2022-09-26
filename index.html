@@ -22,101 +22,219 @@
         <div class="headerContainer">
 
             <div class="logo"><img src="./img/wd-logo-alternative.svg"></div>
-
-            <nav>
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Sobre mim</a></li>
-                    <li><a href="#">Habilidades</a></li>
-                    <li><a href="#">Portfólio</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
+            <div class="wrapperHamburguerMenu">
+                <button class="bt-menu" title="Menu">
+                    <span class="hamburguer">
+                        <span class="bar bar-1"></span>
+                        <span class="bar bar-2"></span>
+                        <span class="bar bar-3"></span>
+                    </span>
+                </button>
+            </div>
+            <div id="hamburguerMenu" class="hidden">
+                <div class="containerHamburguerMenu">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Início</a></li>
+                            <li><a href="#">Sobre mim</a></li>
+                            <li><a href="#">Habilidades</a></li>
+                            <li><a href="#">Portfólio</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
 
         </div>
     </header>
 
     <main>
 
-        <div class="section s1" id="section1">
-            <div class="sectionContainer">
-                <div class="col column">
-                    <section class="containerTitle">
-                        <h1>Olá!<br>Meu nome é<br><span id="myName">Wesley Dionisio</span></h1>
-                    </section>
-                    <ul class="hashtags">
-                        <li><a>#21 anos</a></li>
-                        <li><a>#Gaúcho</a></li>
-                        <li><a>#Design</a></li>
-                        <li><a>#Desenvolvimento</a></li>
-                    </ul>
-                </div>
-                <div class="col2"><img src="./img/foto-circle.png"></div>
-            </div>
-            <div class="scrollDown"><a href="#section2">
-                    <span class="material-symbols-outlined">
-                        mouse
-                    </span></a>
-            </div>
-        </div>
-
-        <div class="section s2" id="section2">
-            <div class="sectionContainer">
-                <div class="col">
-                    <section class="containerTitle alignCenter" id="AboutMe">
-                        <h1>Um pouco mais sobre mim</h1>
-                    </section>
-
-                    <p> Desde o início de minha jornada como designer há mais de 7 anos,
-                        já prestei serviços remotos para agências, gráficas e
-                        profissionais autônomos.</p>
-                    <p> Valorizo trabalhar com pessoas criativas e com a mente igual a
-                        minha: em constante busca por aprendizado e com uma sede por
-                        resolver problemas.</p>
-                    <p>
-                        Sou uma pessoa em infinito questionamento sobre as coisas.
-                        Aquele ar de: <i>"Será que não há uma forma melhor de fazer isso?"</i>
-                    </p>
-                    <br />
-                    <p>
-                        Atualmente cursando Gerenciamento de Projetos pelo Google e
-                        Formação Oracle One
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="section s3" id="section3">
+        <div class="section" id="s1">
             <div class="sectionContainer">
 
-                <div class="col">
-                    <section class="containerTitle alignCenter" id="AboutMe">
-                        <h1>Skills</h1>
-                    </section>
+                <div class="row">
+
+                    <div class="column" id="c1">
+                        <section class="containerTitle">
+                            <h1>Olá!<br>Meu nome é<br><span id="myName">Wesley Dionisio</span></h1>
+                        </section>
+                        <ul class="hashtags">
+                            <li><a>#21 anos</a></li>
+                            <li><a>#Gaúcho</a></li>
+                            <li><a>#Design</a></li>
+                            <li><a>#Desenvolvimento</a></li>
+                        </ul>
                     </div>
-                <div class="col row">
 
-                    <div class="col">A</div>
-                    <div class="col">B</div>
-                    <div class="col">C</div>
+                    <div class="column" id="c2">
+                        <img src="./img/foto-circle.png">
+                    </div>
+
+                    <div class="row" id="scrollDownMobile">
+                        <div class="scrollDown"><a href="#section2">
+                                <span class="material-symbols-outlined">mouse</span></a>
+                        </div>
+                    </div>
 
                 </div>
+
+                <div class="row" id="scrollDownDesktop">
+                    <div class="scrollDown"><a href="#section2">
+                            <span class="material-symbols-outlined">mouse</span></a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="section" id="s2">
+                <div class="sectionContainer">
+                    <div class="row">
+                        <section class="containerTitle">
+                            <h1>Um pouco sobre mim</h1>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <p> Desde o início de minha jornada como designer, há mais de 7 anos,
+                                já prestei serviços remotos para agências, gráficas e
+                                profissionais autônomos.</p>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab consequatur delectus
+                                veritatis dolorum quidem.</p>
+                            <p>
+                                Atualmente cursando Gerenciamento de Projetos pelo Google e
+                                Formação Oracle One
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="s3">
+
+                <div class="sectionContainer">
+
+                    <div class="column">
+                        <div class="circle">
+                            <span class="material-symbols-outlined" id="hardSkillIcon">
+                                brush
+                            </span>
+                        </div>
+                        <h2>Design</h2>
+                        <p>Trabalho como Designer Gráfico e Designer Web, buscando um design pattern limpo e criativo!
+                        </p>
+
+                        <h3>Skills</h3>
+                        <p>Design Pattern
+                            <br>
+                            Mídias Web e Impressas
+                            <br>
+                            Layout de Sites e Aplicações
+                            <br>
+                            Criação de Marcas.
+                        </p>
+
+                        <h3>Tecnologias</h3>
+
+                        <div class="softwares">
+                            <ul>
+                                <li><img src="./img/softwares/ps.svg"></li>
+                                <li><img src="./img/softwares/ai.svg"></li>
+                                <li><img src="./img/softwares/an.svg"></li>
+                                <li><img src="./img/softwares/fig.svg"></li>
+                                <li><img src="./img/softwares/cdr.svg"></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="circle">
+                            <span class="material-symbols-outlined" id="hardSkillIcon">
+                                code
+                            </span>
+                        </div>
+                        <h2>Desenvolvimento</h2>
+                        <p>Em constante estudo nessa área, prezo por telas User Friendly.
+                        </p>
+
+                        <h3>Skills</h3>
+                        <p>Criação de páginas estáticas
+                            <br>
+                            E-commerces
+                            <br>
+                            Wordpress
+                            <br>
+                            Landing Pages.
+                        </p>
+
+                        <h3>Tecnologias</h3>
+                        <div class="softwares">
+                            <ul>
+                                <li><img src="./img/softwares/ps.svg"></li>
+                                <li><img src="./img/softwares/ai.svg"></li>
+                                <li><img src="./img/softwares/an.svg"></li>
+                                <li><img src="./img/softwares/fig.svg"></li>
+                                <li><img src="./img/softwares/cdr.svg"></li>
+                            </ul>
+                        </div>
+                        <div class="barChat">
+                            <!-- <div class="skillBar front expert" data-skill="HTML"></div>
+                        <div class="skillBar advanced" data-skill="CSS"></div>
+                        <div class="skillBar front intermediate" data-skill="JS"></div>
+                        <div class="skillBar back expert" data-skill="Wordpress"></div>
+                        <div class="skillBar back expert" data-skill="Elementor"></div> -->
+
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="circle">
+                            <span class="material-symbols-outlined" id="hardSkillIcon">
+                                how_to_reg
+                            </span>
+                        </div>
+                        <h2>Soft Skills</h2>
+                        <p>Me considero uma pessoa flexível, criativa e organizada.
+                        </p>
+
+                        <h3>Skills</h3>
+                        <p>Proatividade
+                            <br>
+                            Flexibilidade
+                            <br>
+                            Senso crítico
+                            <br>
+                            Espírito de Liderança
+                        </p>
+
+
+                        <h3>Tecnologias</h3>
+
+                        <div class="softwares">
+                            <ul>
+                                <li><img id="trello" src="./img/softwares/trello.svg"></li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
 
             </div>
 
         </div>
+        </div>
+
+
 
 
     </main>
 
-
-
-    <footer>
-
-        <div class="logo">WD</div>
-
-    </footer>
 
 </body>
 

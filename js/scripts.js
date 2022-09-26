@@ -7,4 +7,16 @@ function scrollFunction() {
     document.getElementById("header").classList.remove('headerShrink')
   }
 }
-    console.log("Uuu")
+
+$('.bt-menu').on('click', function(e) {
+  e.preventDefault();
+  $('body').toggleClass('menu-open');
+  document.getElementById('hamburguerMenu').classList.toggle('hidden')
+  document.getElementById('hamburguerMenu').classList.toggle('sideMenu')
+
+});
+
+
+console.log("Uuu")
+
+    
