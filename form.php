@@ -9,22 +9,23 @@ if(empty($_POST['name'])  ||
 }
 
 $name = $_POST['name']; 
-$email_address = $_POST['email']; 
+$email_address = $_POST['email'];
+$phone = $_POST['phone']; 
 $message = $_POST['message']; 
 
 if (!preg_match(
 "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
 $email_address))
 {
-    $errors .= "\n Error: Invalid email address";
+    $errors .= "\n Erro: E-mail inválido.";
 }
 
 if( empty($errors))
 {
 	$to = $myemail; 
-	$email_subject = "Contact form submission: $name";
-	$email_body = "You have received a new message. ".
-	" Here are the details:\n Name: $name \n Email: $email_address \n Message \n $message"; 
+	$email_subject = "Formulário recebido de: $name";
+	$email_body = "Você recebeu uma mensagem a partir de formulário. ".
+	" Aqui está os detalhes:\n Nome: $name \n E-mail: $email_address \n Celular/WhatsApp: $phone \n Mensagem: \n $message"; 
 	
 	$headers = "From: $myemail\n"; 
 	$headers .= "Reply-To: $email_address";
