@@ -49,7 +49,7 @@ tabs.addEventListener("change", function () {
 
 $(document).ready(function() {
   var delay = 2000;
-  $('.btn-default').click(function(e){
+  $('.buttonSubmit').click(function(e){
   e.preventDefault();
   var name = $('#name').val();
   if(name == ''){
@@ -91,10 +91,10 @@ $(document).ready(function() {
   ({
   type: "POST",
   url: "form.php",
-  data: "name="+name+"&email="+email+"&message="+message+"&phone="+phone,
+  data: "name="+name+"&email="+email+"&message="+message,
   beforeSend: function() {
   $('.message_box').html(
-  '<img src="Loader.gif" width="25" height="25"/>'
+  'Enviando...'
   );
   },		 
   success: function(data)
