@@ -15,6 +15,9 @@ $(".bt-menu").on("click", function (e) {
   $("body").toggleClass("menu-open");
   document.getElementById("hamburguerMenu").classList.toggle("hidden");
   document.getElementById("hamburguerMenu").classList.toggle("sideMenu");
+  document.getElementById("hamburguerMenu").classList.toggle("fadeToRight");
+  
+  
 });
 
 let tabs = document.getElementById("contentSlider");
@@ -29,14 +32,18 @@ tabs.addEventListener("change", function () {
     content1.classList.toggle("hidden");
     content2.classList.toggle("hidden");
     content1.classList.toggle('fadeIn');
+    content2.classList.remove('fadeIn');
   
     console.log(radio1.checked);
   } else if (radio2.checked) {
     content2.classList.toggle("hidden");
     content1.classList.toggle("hidden");
+    content1.classList.remove('fadeIn');
     content2.classList.toggle('fadeIn');
     console.log(radio2.checked);
   }
 }, false);
+
+
 
 console.log("Uuu");
