@@ -224,7 +224,7 @@ html {
     flex-direction: column;
   }
 
-  .sectionContainer .row {
+  .sectionContainer#s1 .row {
     flex-direction: column;
   }
 
@@ -684,12 +684,15 @@ main {
   display: none !important;
 }
 
+div#content1, div#content2 {
+  align-items: stretch;
+}
+
+
 .box {
   display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   padding: var(--rowPadding);
   background-color: white;
@@ -698,7 +701,24 @@ main {
   max-width: 250px;
   min-height: 350px;
   text-align: center;
+  flex-direction: row;
+  align-content: space-between;
+}
 
+.boxContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.boxContent {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: stretch;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .box h2 {
@@ -706,7 +726,14 @@ main {
 }
 
 .box .paragraph {
-  display: table;
+  display: flex;
+  height: 100%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .box p {
@@ -715,13 +742,13 @@ main {
 }
 
 
-.image img {
+.boxHeader img {
   border-radius: 16px;
   max-width: 100%;
   overflow: hidden;
 }
 
-.image:hover img {}
+.boxHeader:hover img {}
 
 .highlight {
   background-color: #f1f1f1;
@@ -801,6 +828,42 @@ main {
 
 .cardContent p {
   border-bottom: 1px solid #f1f1f1;
+}
+
+.wrapButtons {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.boxButton {
+  border: 0;
+  padding: 10px 10px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+}
+
+.demo {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.source {
+  border: 2px solid var(--black);
+  color: var(--black);
+}
+
+.boxButton img {
+  height: 15px;
 }
 
 
