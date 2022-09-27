@@ -440,7 +440,7 @@
                                 <label for="email">E-mail</label>
                                 <input type="email" name="email" id="email"  placeholder="Seu e-mail" required>
                                 <label for="whatsapp"></label>
-                                <input type="tel" name="phone" id="whatsapp" placeholder="Celular/WhatsApp" required>
+                                <input type="tel" name="phone" id="whatsapp" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" placeholder="Celular/WhatsApp" required>
                                 <label for="message">Mensagem</label>
                                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Sua mensagem... (Opcional)"></textarea>
                                 <button type="submit" class="boxButton buttonSubmit" id="submit">Enviar</button>
