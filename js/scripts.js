@@ -87,7 +87,7 @@ $(document).ready(function() {
      return false;
   }	
 
-  var phone = $('#phone').val();
+  var phone = $('#whatsapp').val();
 
   $.ajax
   ({
