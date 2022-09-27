@@ -86,12 +86,14 @@ $(document).ready(function() {
   $('#message').focus();
      return false;
   }	
-         
+
+  var phone = $('#phone').val();
+
   $.ajax
   ({
   type: "POST",
   url: "form.php",
-  data: "name="+name+"&email="+email+"&message="+message,
+  data: "name="+name+"&email="+email+"&message="+message+"&phone="+phone,
   beforeSend: function() {
   $('.message_box').html(
   'Enviando...'
