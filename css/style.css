@@ -528,7 +528,7 @@ main {
   padding-bottom: 70px;
 }
 
-#s2 .containerTitle h1 {
+#s2 .containerTitle h1,strong {
   color: white;
 }
 
@@ -571,55 +571,6 @@ main {
   font-size: 52px;
   margin: 10px;
   color: white;
-}
-
-.skillBar {
-  background-color: #eee;
-  border-radius: 15px;
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #fff;
-  width: 100%;
-}
-
-.skillBar::before {
-  content: attr(data-skill);
-  background-color: var(--defaultBlue);
-  display: flex;
-  padding: 5px 0 5px 10px;
-  border-radius: inherit;
-  animation: load 2s 0s;
-  -webkit-animation: load 2s 0s;
-  -moz-animation: load 2s 0s;
-  -o-animation: load 2s 0s;
-}
-
-.skillBar.front::before {
-  background-color: var(--defaultBlue);
-}
-
-.skillBar.back::before {
-  background-color: var(--defaultLightBlue);
-}
-
-.skillBar.learning::before {
-  width: calc(20% - 10px);
-}
-
-.skillBar.basic::before {
-  width: calc(40% - 10px);
-}
-
-.skillBar.intermediate::before {
-  width: calc(70% - 10px);
-}
-
-.skillBar.advanced::before {
-  width: calc(80% - 10px);
-}
-
-.skillBar.expert::before {
-  width: calc(100% - 10px);
 }
 
 .softwares ul {
@@ -841,14 +792,16 @@ div#content1, div#content2 {
 
 .boxButton {
   border: 0;
-  padding: 10px 10px;
-  border-radius: 16px;
+  padding: 0 10px;
+  border-radius: 99px;
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
   align-items: center;
   gap: 5px;
+  height: 35px;
+  cursor: pointer;
 
 }
 
@@ -859,12 +812,59 @@ div#content1, div#content2 {
 
 .source {
   border: 2px solid var(--black);
+  background-color: transparent;
   color: var(--black);
 }
 
 .boxButton img {
   height: 15px;
 }
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.formWrapper form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: var(--rowGap);
+}
+
+.formWrapper input, textarea {
+  border: 0;
+  border-radius: 16px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.formWrapper label {
+  display: none;
+}
+
+.formWrapper #message {
+  height: 100px;
+  resize: none;
+}
+
+textarea {
+  font-family: inherit;
+}
+
+.boxButton#submit {
+  background-color: var(--defaultBlue);
+  color: white;
+}
+
+.formWrapper input,textarea:focus-visible {
+  outline-width: 0;
+}
+
 
 
 /* Animation Presets */
