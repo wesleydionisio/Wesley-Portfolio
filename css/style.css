@@ -84,11 +84,12 @@ html {
     width: 100%;
     max-width: 70px;
   }
-
+  
   .desktopNav {
     display: none;
   }
 
+  
   .headerContainer {
     display: flex;
     flex-direction: row;
@@ -110,7 +111,7 @@ html {
     position: relative;
   }
 
-  #hamburguerMenu {
+  .hamburguerMenu {
     display: flex;
     width: 50vw;
     height: auto;
@@ -128,7 +129,7 @@ html {
     border: 1px solid #f1f1f1;
   }
 
-  #hamburguerMenu nav {
+  .hamburguerMenu nav {
     display: flex;
   }
 
@@ -281,14 +282,13 @@ html {
   .tabs {
     transform: scale(0.6);
   }
-  
-  .row#content2 {
+
+  .row#content1, .row#content2 {
     flex-direction: column;
     align-items: center;
   }
 
   .boxContent {
-
     min-height: 180px;
     height: 180px;
   }
@@ -375,6 +375,11 @@ html {
 
   .desktopNav {
     display: flex;
+  }
+
+  
+  .hamburguerMenu {
+    display: none;
   }
 
   nav ul {
@@ -767,9 +772,19 @@ div#content1, div#content2 {
   font-size: 72px;
 }
 
+#bluerred  {
+  filter: blur(5px) saturate(0);
+  overflow: hidden;
+}
+
 #s5 .row {
   align-items: stretch;
   flex-wrap: wrap;
+}
+
+#Subtitle {
+  text-align: center;
+  font-weight: 400;
 }
 
 .card {
@@ -932,6 +947,16 @@ textarea {
 
 .circle img {
   width: 35px;
+}
+
+.active {
+  -webkit-transform: translateX(-350px);
+  -moz-transform: translateX(-350px);
+  -o-transform: translateX(-350px);
+  -ms-transform: translateX(-350px);
+  transform: translateX(-350px);
+  box-shadow: var(--defaultShadow);
+
 }
 
 /* Animation Presets */

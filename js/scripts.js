@@ -10,15 +10,26 @@ function scrollFunction() {
   }
 }
 
-$(".bt-menu").on("click", function (e) {
-  e.preventDefault();
-  $("body").toggleClass("menu-open");
-  document.getElementById("hamburguerMenu").classList.toggle("hidden");
-  document.getElementById("hamburguerMenu").classList.toggle("sideMenu");
-  document.getElementById("hamburguerMenu").classList.toggle("fadeToRight");
-  
-  
+$(function() {
+  var box = $('.hamburguerMenu');
+  var button = $('.bt-menu');
+  button.on('click', function(){
+    box.toggleClass('active');
+    
+  });
 });
+
+
+
+// $(".bt-menu").on("click", function (e) {
+//   e.preventDefault();
+//   $("body").toggleClass("menu-open");
+//   document.getElementById("hamburguerMenu").classList.toggle("hidden");
+//   document.getElementById("hamburguerMenu").classList.toggle("sideMenu");
+//   document.getElementById("hamburguerMenu").classList.toggle("fadeToRight");
+  
+  
+// });
 
 let tabs = document.getElementById("contentSlider");
 let radio1 = document.getElementById("radio1");
